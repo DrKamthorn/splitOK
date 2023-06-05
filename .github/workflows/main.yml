@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main  # Adjust this to match your repository's main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x  # Replace with the desired Python version
+
+    - name: Install FFmpeg and FFprobe
+      run: |
+        sudo apt update
+        sudo apt install ffmpeg
+
+    - name: Verify FFprobe installation
+      run: ffprobe --version
+
+    # Add additional steps for your Streamlit app here
