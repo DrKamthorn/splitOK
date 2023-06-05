@@ -31,7 +31,7 @@ def main():
 
     if audio_file is not None:
         # Specify the chunk duration in minutes
-        chunk_duration = 30
+        chunk_duration = 15
 
         # Split the audio file into chunks
         output_dir = split_audio_file(audio_file, chunk_duration)
