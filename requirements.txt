@@ -1,2 +1,4 @@
+
 pydub==0.25.1
-streamlit==0.89.0
+streamlit==1.23.1
+ffprobe-python
