@@ -46,5 +46,5 @@ def main():
             file_url = "audio_chunks.zip"
             st.markdown(f"Click [here]({file_url}) to download the audio chunks.")
 
-if name == '__main__':
+if __name__ == '__main__':
     main()
